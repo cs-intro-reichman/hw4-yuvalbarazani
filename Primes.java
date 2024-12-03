@@ -5,12 +5,15 @@ public class Primes {
         boolean[] arr=new boolean[N];
         arr[0]= true;
         arr[1]=true;
+        int primeCount = N;
          
         while(p <= Math.sqrt(N)){
             
             for(int i = 0;i<N;i++){
-                if(i % p == 0 && i != p)
+                if(i % p == 0 && i != p){
                     arr[i]=true;
+                    primeCount--;
+                }
             }
             p++;
 
@@ -27,5 +30,7 @@ public class Primes {
                 System.out.println(i);
             }          
         }
+        int percentage = (int)(primeCount/(double)N *100);
+        System.out.println("There are " + primeCount + " primes between 2 and " + N + " (" + percentage + "% are primes");
     }
 }
