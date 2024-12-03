@@ -5,7 +5,7 @@ public class Primes {
         boolean[] arr=new boolean[N];
         arr[0]= true;
         arr[1]=true;
-        int primeCount = N;
+        int primeCount = N-2;//
          
         while(p <= Math.sqrt(N)){
             
