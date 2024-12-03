@@ -166,6 +166,9 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
 
+        if(str1.length()==0 || str2.length()==0)
+            return -2;
+            
         for(int i =0; i<Math.min(str1.length(),str2.length()); i++)
         {
             if(str1.charAt(i)>str2.charAt(i))
