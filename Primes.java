@@ -5,13 +5,13 @@ public class Primes {
         boolean[] arr=new boolean[N+1];
         arr[0]= true;
         arr[1]=true;
-        int primeCount = N-1;//
+        int primeCount = N-1;// not icluding 0 and 1
          
         while(p <= Math.sqrt(N)){
             
             for(int i = 0;i<N+1;i++){
-                if(i % p == 0 && i != p){
-                     if(arr[i] == false){
+                if(i % p == 0 && i != p){// check if the number is not prime 
+                     if(arr[i] == false){ // important to not count the same number multiple times
                         primeCount--;
                         arr[i]=true;
                     }
