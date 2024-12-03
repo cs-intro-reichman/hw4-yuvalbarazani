@@ -11,7 +11,7 @@ public class Primes {
             
             for(int i = 0;i<N;i++){
                 if(i % p == 0 && i != p){
-                     if(arr[i]=false){
+                     if(arr[i] == false){
                         primeCount--;
                         arr[i]=true;
                     }
